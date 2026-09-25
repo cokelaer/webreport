@@ -18,12 +18,16 @@ Common CSS and JavaScript for coherent HTML reports across projects.
 
 ## Quick Start
 
-Use Claude Code's webreport skill for automated setup:
-```
-/webreport-generator basic <report-name> <depth>
+### Option 1: CDN (Recommended for external projects)
+
+```html
+<link rel="stylesheet" href="https://raw.githubusercontent.com/cokelaer/webreport/main/css/webreport.css">
+<script src="https://raw.githubusercontent.com/cokelaer/webreport/main/js/webreport.js"></script>
 ```
 
-Or manually link in your HTML:
+Works anywhere — no local copy needed. Framework loads from GitHub.
+
+### Option 2: Local symlink/copy (For projects that include webreport)
 
 ```html
 <link rel="stylesheet" href="../../../webreport/css/webreport.css">
@@ -31,6 +35,12 @@ Or manually link in your HTML:
 ```
 
 Adjust `../../../webreport/` path based on your project depth.
+
+### Option 3: Claude Code skill (Automated setup)
+
+```
+/webreport-generator basic <report-name> <depth>
+```
 
 See `templates/sample-report.html` for a complete working example.
 
