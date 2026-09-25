@@ -29,11 +29,17 @@ Skill for creating HTML reports using the webreport CSS/JS framework. Auto-gener
 
 ## Usage Examples
 
-### Generate basic report template
+### Generate basic report template (CDN)
+```
+/webreport-generator basic <report-name>
+```
+Creates `<report-name>/index.html` using CDN links (GitHub raw content). Works anywhere, no local paths needed.
+
+### Generate basic report template (Local)
 ```
 /webreport-generator basic <report-name> <depth>
 ```
-Creates `<report-name>/index.html` with correct relative paths from depth (e.g., depth=3 → `../../../webreport/`)
+Creates `<report-name>/index.html` with relative paths from depth (e.g., depth=3 → `../../../webreport/`). Use when webreport is symlinked/copied locally.
 
 ### Generate report with gallery
 ```
@@ -52,6 +58,21 @@ Adds statistics grid with sample stat boxes.
 /webreport-generator link <target-project-path> <report-depth>
 ```
 Symlink or copy webreport assets into an external project, set correct paths.
+
+## Asset Links
+
+### CDN (Recommended)
+```html
+<link rel="stylesheet" href="https://raw.githubusercontent.com/cokelaer/webreport/main/css/webreport.css">
+<script src="https://raw.githubusercontent.com/cokelaer/webreport/main/js/webreport.js"></script>
+```
+
+### Local (Relative paths)
+```html
+<link rel="stylesheet" href="../css/webreport.css">          <!-- depth=1 -->
+<link rel="stylesheet" href="../../css/webreport.css">       <!-- depth=2 -->
+<link rel="stylesheet" href="../../../css/webreport.css">    <!-- depth=3 -->
+```
 
 ## Framework Components Reference
 

@@ -2,13 +2,21 @@
 
 ## For Report Authors (Using Claude Code)
 
-### Generate a New Report
+### Generate a New Report (CDN - Recommended)
+
+```bash
+/webreport-generator basic my_report
+```
+
+Creates a report using CDN links (GitHub raw content). Works anywhere, no local setup needed.
+
+### Generate a New Report (Local)
 
 ```bash
 /webreport-generator basic my_report 3
 ```
 
-This creates a report template with correct relative paths for a project 3 directories deep.
+Creates a report with relative paths for a project 3 directories deep. Use when webreport is copied/symlinked locally.
 
 ### Available Generators
 
@@ -97,13 +105,24 @@ webreport/
 
 If you have an existing report:
 
-1. Copy `css/webreport.css` and `js/webreport.js` to your project
-2. Add `<link>` and `<script>` tags to your HTML
+**Option A: Use CDN (Recommended, no file copying)**
+1. Add `<link>` to CDN CSS in `<head>`
+2. Add `<script>` to CDN JS before `</body>`
 3. Wrap content in `<main><div class="container">` 
 4. Create `<div id="toc-sidebar">` with empty `<ul id="toc-list">`
 5. Create `<div id="imageModal" class="modal">` (see sample template)
 6. Use semantic h2/h3 headings (TOC auto-generated)
 7. Update image links: `onclick="openImage('path/to/img')"`
+
+CDN links:
+```html
+<link rel="stylesheet" href="https://raw.githubusercontent.com/cokelaer/webreport/main/css/webreport.css">
+<script src="https://raw.githubusercontent.com/cokelaer/webreport/main/js/webreport.js"></script>
+```
+
+**Option B: Use Local Copy**
+1. Copy `css/webreport.css` and `js/webreport.js` to your project
+2-7. Same steps as above, adjust relative paths
 
 Most existing styles will auto-apply. Custom tweaks go in project-specific CSS loaded after webreport.css.
 
