@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Report - Webreport Framework</title>
+    <link rel="stylesheet" href="../css/webreport.css">
+</head>
+<body>
+    <!-- Table of Contents Sidebar -->
+    <aside>
+        <div id="toc-sidebar">
+            <h3>Contents</h3>
+            <ul id="toc-list"></ul>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Title -->
+            <h1>Sample Report Title</h1>
+
+            <!-- Statistics Section -->
+            <h2>Key Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="label">Total Items</div>
+                    <div class="value">1,234</div>
+                </div>
+                <div class="stat-box">
+                    <div class="label">Success Rate</div>
+                    <div class="value">98.5%</div>
+                </div>
+                <div class="stat-box">
+                    <div class="label">Processing Time</div>
+                    <div class="value">2.3s</div>
+                </div>
+                <div class="stat-box">
+                    <div class="label">Data Points</div>
+                    <div class="value">42K</div>
+                </div>
+            </div>
+
+            <!-- First Section -->
+            <h2>Overview</h2>
+            <div class="section">
+                <p>This is a sample report demonstrating the webreport framework. The framework provides:</p>
+                <ul>
+                    <li>Dynamic table of contents (auto-generated from headings)</li>
+                    <li>Responsive layout with fixed sidebar navigation</li>
+                    <li>Pre-styled components for statistics, tables, galleries, and more</li>
+                    <li>Image modal viewer with keyboard/click-outside support</li>
+                </ul>
+            </div>
+
+            <!-- Data Section with Table -->
+            <h2>Data Table Example</h2>
+            <div class="section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                            <th>Column 3</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Data A</td>
+                            <td>Value 1</td>
+                            <td>100</td>
+                            <td>Complete</td>
+                        </tr>
+                        <tr>
+                            <td>Data B</td>
+                            <td>Value 2</td>
+                            <td>200</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr>
+                            <td>Data C</td>
+                            <td>Value 3</td>
+                            <td>300</td>
+                            <td>Complete</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Method/Code Box -->
+            <h2>Implementation Details</h2>
+            <div class="section">
+                <div class="section-header">Processing Pipeline</div>
+                <div class="method-box">
+load_data()
+process_data()
+validate_results()
+export_report()
+                </div>
+            </div>
+
+            <!-- Highlight Box -->
+            <div class="highlight">
+                <strong>Note:</strong> This framework is designed for HTML report generation. Links in the sidebar are auto-generated from h2/h3 headings in the page.
+            </div>
+
+            <!-- Gallery Section -->
+            <h2>Image Gallery</h2>
+            <p>Click any image to view at full size.</p>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <a href="#" onclick="openImage('https://via.placeholder.com/300x200?text=Image+1'); return false;">
+                        <img src="https://via.placeholder.com/300x200?text=Image+1" alt="Sample image 1">
+                        <div class="caption">Sample Image 1</div>
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="#" onclick="openImage('https://via.placeholder.com/300x200?text=Image+2'); return false;">
+                        <img src="https://via.placeholder.com/300x200?text=Image+2" alt="Sample image 2">
+                        <div class="caption">Sample Image 2</div>
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="#" onclick="openImage('https://via.placeholder.com/300x200?text=Image+3'); return false;">
+                        <img src="https://via.placeholder.com/300x200?text=Image+3" alt="Sample image 3">
+                        <div class="caption">Sample Image 3</div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- More Content -->
+            <h2>Additional Information</h2>
+            <div class="section">
+                <p>Add more content sections as needed. Each h2 heading automatically appears in the sidebar navigation.</p>
+                <h3>Subsection Example</h3>
+                <p>H3 headings also appear in the TOC with indentation, useful for organizing complex reports.</p>
+            </div>
+
+            <h2>Usage Instructions</h2>
+            <div class="section">
+                <ol>
+                    <li>Copy this template to your project location</li>
+                    <li>Adjust the CSS/JS paths based on your directory depth (e.g., <code>../css/webreport.css</code>)</li>
+                    <li>Replace placeholder content with your data</li>
+                    <li>Use semantic h2/h3 headings for automatic TOC generation</li>
+                    <li>Add images to gallery with <code>onclick="openImage('path/to/image')"</code></li>
+                </ol>
+            </div>
+
+            <hr>
+            <p class="text-muted text-center">Generated with Webreport Framework</p>
+        </div>
+    </main>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeImage()">&times;</span>
+            <img id="modalImage" class="modal-img" src="" alt="">
+        </div>
+    </div>
+
+    <!-- Webreport Framework Scripts -->
+    <script src="../js/webreport.js"></script>
+</body>
+</html>
