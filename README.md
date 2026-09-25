@@ -48,6 +48,8 @@ See `templates/sample-report.html` for a complete working example.
 - `.method-box`: Code/method display box
 - `.modal`: Image viewer modal
 - `.highlight`: Emphasized text box
+- `.webreport-footer`: Footer section with border
+- `.webreport-badge`: Styled "Built with Webreport" link badge
 
 ### JavaScript Functions
 

@@ -318,3 +318,30 @@ hr {
 .text-muted {
     color: #7f8c8d;
 }
+
+/* Footer */
+footer.webreport-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.webreport-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    color: #2c3e50 !important;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.webreport-badge:hover {
+    background: #3498db;
+    color: white !important;
+    border-color: #3498db;
+}
